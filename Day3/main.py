@@ -30,12 +30,11 @@ def main():
                     start = counter
                 number=number*10 + int(line[counter])
 
-            if(line[counter] == '.' and number != 0):
+            if(not line[counter].isdigit() and number != 0):
                 if(checkValidity(data, start-1, counter+1, index)):
-                    sum += number
+                    sum = sum+ number
                     print(f"these are the numbers {number}")
                 number = 0
-                
                 
 
             counter += 1
